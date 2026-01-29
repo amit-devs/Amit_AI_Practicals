@@ -1,5 +1,5 @@
 from collections import deque
-print("shouri")
+print("Amit")
 def water_jug(a, b, target):
     visited = set()
     queue = deque()
@@ -36,5 +36,6 @@ def water_jug(a, b, target):
 a = int(input("Enter capacity of Jug A: "))
 b = int(input("Enter capacity of Jug B: "))
 target = int(input("Enter target amount: "))
+
 
 water_jug(a, b, target)
