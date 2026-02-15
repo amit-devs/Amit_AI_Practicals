@@ -1,1 +1,1 @@
-My AI Practicals
+These are all my AI Practials.
