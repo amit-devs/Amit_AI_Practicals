@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaChat - NextGen Intelligence</title>
+    <!-- Use Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="stars"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <div class="brand">
+                    <h1>NovaChat</h1>
+                    <span class="status"><span class="pulse"></span> Online</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Settings"><i data-lucide="settings"></i></button>
+            </div>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-window" id="chat-window">
+            <div class="messages" id="messages-container">
+                <!-- Welcome Message -->
+                <div class="message bot-message entrance">
+                    <div class="avatar"><i data-lucide="bot"></i></div>
+                    <div class="bubble">
+                        <p>Welcome to <strong>NovaChat</strong>. I am your next-generation AI assistant. How may I assist you with your tasks today?</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Typing Indicator (Hidden by default) -->
+            <div class="typing-indicator-container hidden" id="typing-indicator">
+                <div class="avatar"><i data-lucide="bot"></i></div>
+                <div class="bubble typing-bubble">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="chat-footer">
+            <div class="input-container">
+                <button class="icon-btn attach-btn" aria-label="Attach File"><i data-lucide="paperclip"></i></button>
+                <textarea id="chat-input" placeholder="Initiate sequence or type a message..." rows="1"></textarea>
+                <button class="send-btn" id="send-btn" aria-label="Send Message"><i data-lucide="send"></i></button>
+            </div>
+            <div class="footer-note">Powered by Nova Engine v2.0</div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
